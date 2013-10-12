@@ -1,0 +1,63 @@
+/* Mario Hsieh */
+body, ul, li, p, h1
+{
+	padding: 0px;
+	margin: 0px;
+}
+.center
+{
+	margin: 0px auto;
+}
+.block
+{
+	display: block;
+}
+.left
+{
+	float: left;
+}
+.right
+{
+	float: right;
+}
+header
+{
+	background-color: #000000;
+	padding: 5px;
+}
+	h1#main-title
+	{
+		text-align: center;
+		color: #FFFFFF;
+		font-variant: small-caps;
+	}
+section
+{
+	width: 960px;
+	height: 500px;
+	padding: 20px;
+}
+#page1
+{
+	background-color: red;
+}
+#page2
+{
+	background-color: blue;
+}
+#page3
+{
+	background-color: green;
+}
+#page4
+{
+	background-color: orange;
+}
+#page5
+{
+	background-color: yellow;
+}
+span
+{
+	color: red;
+}
