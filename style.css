@@ -23,6 +23,7 @@ body, ul, li, p, h1
 body
 {
 	width: 100%;
+	background-color: #D0D0D0;
 }
 header
 {
@@ -49,8 +50,6 @@ h2
 ul.card-row
 {
 	list-style-type: none;
-	/*background-color: white;*/
-	
 }
 	li.card-list-item
 	{
@@ -58,18 +57,47 @@ ul.card-row
 	}
 		div.card
 		{
-			background-color: tan;
+			background-color: #3399FF;
 			width: 175px;
 			height: 250px;
 			margin: 0px 5px;
+			border-radius: 15px;
 		}
-span
+			.choice-red,.choice-black
+			{
+				width: 87px;
+				height: 250px;
+			}
+			.choice-red:hover
+			{
+				background-color: red;
+				border-top-left-radius: 15px;
+				border-bottom-left-radius: 15px;
+				cursor: pointer;
+				cursor: pointer;
+			}
+			.choice-black:hover
+			{
+				background-color: black;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+				cursor: pointer;
+			}
+.red
 {
 	color: red;
 }
+.white
+{
+	color: white;
+}
+.black
+{
+	color: black;
+}
 #page1
 {
-	background-color: white;
+	
 }
 	ul#list-level-5
 	{
@@ -77,7 +105,7 @@ span
 	}
 #page2
 {
-	background-color: white;
+	
 }
 	ul#list-level-4
 	{
@@ -85,7 +113,7 @@ span
 	}
 #page3
 {
-	background-color: white;
+	
 }
 	ul#list-level-3
 	{
@@ -93,7 +121,7 @@ span
 	}
 #page4
 {
-	background-color: white;
+	
 }
 	ul#list-level-2
 	{
@@ -101,7 +129,7 @@ span
 	}
 #page5
 {
-	background-color: white;
+	height: 600px;	
 }
 	ul#list-level-1
 	{
