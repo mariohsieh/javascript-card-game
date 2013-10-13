@@ -23,19 +23,31 @@ body, ul, li, p, h1
 body
 {
 	width: 100%;
-	background-color: #D0D0D0;
+	background-color: #505050;
+	overflow: hidden;
 }
 header
 {
 	background-color: #000000;
-	padding: 5px;
+	width: 960px100%;
+	height: 1080px;	
 }
 	h1#main-title
 	{
+		font-size: 9em;
 		text-align: center;
-		color: #FFFFFF;
 		font-variant: small-caps;
 	}
+	h3
+	{
+		font-size: 4em;
+		text-align: center;
+	}
+		a
+		{
+			text-decoration: none;
+			color: inherit;
+		}
 section
 {
 	width: 960px;
@@ -82,6 +94,16 @@ ul.card-row
 				border-top-right-radius: 15px;
 				border-bottom-right-radius: 15px;
 				cursor: pointer;
+			}
+			.value
+			{
+				font-size: 2em;
+				margin: 10px 15px 0px 0px;
+			}
+			.suit
+			{
+				font-size: 7em;
+				margin: 55px 0px 0px 60px;
 			}
 .red
 {
