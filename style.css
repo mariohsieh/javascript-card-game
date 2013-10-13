@@ -79,21 +79,19 @@ ul.card-row
 			{
 				width: 87px;
 				height: 250px;
+				cursor: pointer;
 			}
 			.choice-red:hover
 			{
 				background-color: red;
 				border-top-left-radius: 15px;
 				border-bottom-left-radius: 15px;
-				cursor: pointer;
-				cursor: pointer;
 			}
 			.choice-black:hover
 			{
 				background-color: black;
 				border-top-right-radius: 15px;
 				border-bottom-right-radius: 15px;
-				cursor: pointer;
 			}
 			.value
 			{
@@ -104,6 +102,24 @@ ul.card-row
 			{
 				font-size: 7em;
 				margin: 55px 0px 0px 60px;
+			}
+			.choice-high, .choice-low
+			{
+				width: 175px;
+				height: 125px;
+				cursor: pointer;
+			}
+			.choice-high:hover
+			{
+				background-color: grey;
+				border-top-right-radius: 15px;
+				border-top-left-radius: 15px;
+			}
+			.choice-low:hover
+			{
+				background-color: grey;
+				border-bottom-right-radius: 15px;
+				border-bottom-left-radius: 15px;
 			}
 .red
 {
