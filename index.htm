@@ -10,67 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<script type="javascript" src="js/bootstrap.min.js"></script> -->
 
-	<!-- jQuery links 
+	<!--jQuery link -->
 	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-     <script type="text/javascript" src="js/jquery-ui.min.js"></script> -->
-     <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />-->
 
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-
+	<link rel="stylesheet" type="text/css" href="css/temple-of-doom.css" />
 	<script type="text/javascript">
-	function deck_of_cards() {
-
-		//this.cards = new Array();
-
-		this.create_deck = function create_deck() {
-			this.cards = new Array();
-			var card_suits = ["C", "D", "H", "S"];
-			var card_values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-			
-
-			for (var i=0;i<card_suits.length;i++){
-				for (var j=0;j<card_values.length;j++) {
-					this.cards.push(card_suits[i]+card_values[j]);
-				}
-			}
-			//console.log(this.cards);
-		}
-
-		this.deal_card = function deal_card(num) {
-			var dealt = new Array();
-
-			for (var i=0;i<num;i++) {
-				var temp = Math.floor((Math.random()*this.cards.length)+1)-1;
-				console.log(temp);
-				var card = this.cards[temp];
-				this.cards.splice(temp, 1);			
-				dealt.push(card);
-				//console.log(temp);
-			}
-			return dealt;
-		}
-	}
-	fresh_deck = new deck_of_cards();
-	fresh_deck.create_deck();
-	console.log(fresh_deck.cards);
-	//console.log(fresh_deck.cards.length);
-
-	console.log(fresh_deck.deal_card(5));
-	console.log(fresh_deck.cards);
-	//console.log(fresh_deck.cards.length);
-	
-	console.log(fresh_deck.deal_card(10));
-	console.log(fresh_deck.cards);
-
-
-	fresh_deck.create_deck();
-	console.log(fresh_deck.cards);
-	//var x = Math.floor((Math.random()*10)+1)-1;
-	//console.log(x);
-
-
-
-
 
 	</script>
 </head>
@@ -79,46 +23,72 @@
 	<h1 id="main-title">Temple of Doom</h1>
 </header>
 <section id="page1" class="center">
-	<h2>RED or BLACK?</h2>
+	<h2><span class="red">RED</span> <span class="white">or</span> BLACK<span class="white">?</span></h2>
 	<ul id="list-level-5" class="card-row center">
-		<li class="card-list-item"><div class="card"></div></li>
+		<li class="card-list-item"><div id="1" class="card"></div></li>
 	</ul>
 <!-- &spades;&clubs;<span>&diams;&hearts;</span> -->
 </section>
 <section id="page2" class="center">
 	<h2>HIGH or LOW?</h2>
 	<ul id="list-level-4" class="card-row center">
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
+		<li class="card-list-item"><div id="2" class="card"></div></li>
+		<li class="card-list-item"><div id="3" class="card"></div></li>
 	</ul>
 </section>
 <section id="page3" class="center">
-	<h2>RED or BLACK?</h2>
+	<h2><span class="red">RED</span> <span class="white">or</span> BLACK<span class="white">?</span></h2>
 	<ul id="list-level-3" class="card-row center">
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
+		<li class="card-list-item"><div id="4" class="card"></div></li>
+		<li class="card-list-item"><div id="5" class="card"></div></li>
+		<li class="card-list-item"><div id="6" class="card"></div></li>
 	</ul>
 </section>
 <section id="page4" class="center">
 	<h2>HIGH or LOW?</h2>
 	<ul id="list-level-2" class="card-row center">
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
+		<li class="card-list-item"><div id="7" class="card"></div></li>
+		<li class="card-list-item"><div id="8" class="card"></div></li>
+		<li class="card-list-item"><div id="9" class="card"></div></li>
+		<li class="card-list-item"><div id="10" class="card"></div></li>
 	</ul>
 </section>
 <section id="page5" class="center">
-	<h2>RED or BLACK?</h2>
+	<h2><span class="red">RED</span> <span class="white">or</span> BLACK<span class="white">?</span></h2>
 	<ul id="list-level-1" class="card-row center">
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
-		<li class="card-list-item"><div class="card"></div></li>
+		<li class="card-list-item">
+			<div id="11" class="card">
+				<div class="choice-red left"></div>
+				<div class="choice-black right"></div>
+			</div>
+		</li>
+		<li class="card-list-item">
+			<div id="12" class="card">
+				<div class="choice-red left"></div>
+				<div class="choice-black right"></div>
+			</div>
+		</li>
+		<li class="card-list-item">
+			<div id="13" class="card">
+				<div class="choice-red left"></div>
+				<div class="choice-black right"></div>
+			</div>
+		</li>
+		<li class="card-list-item">
+			<div id="14" class="card">
+				<div class="choice-red left"></div>
+				<div class="choice-black right"></div>
+			</div>
+		</li>
+		<li class="card-list-item">
+			<div id="15" class="card">
+				<div class="choice-red left"></div>
+				<div class="choice-black right"></div>
+			</div>
+		</li>
 	</ul>
 </section>
+<script type="text/javascript" src="js/temple-of-doom.js"></script>
 </body>
 </html>
 
