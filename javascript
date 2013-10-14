@@ -1,13 +1,13 @@
+	// object declaration for a deck of cards
 	function deck_of_cards() {
 
-		//this.cards = new Array();
-
+		// method to make a deck of cards
 		this.create_deck = function create_deck() {
 			this.cards = new Array();
 			var card_suits = ["C", "D", "H", "S"];
 			var card_values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 			
-
+			// two for loops to create a full deck of cards
 			for (var i=0;i<card_suits.length;i++){
 				for (var j=0;j<card_values.length;j++) {
 					this.cards.push(card_suits[i]+card_values[j]);
@@ -16,9 +16,11 @@
 			//console.log(this.cards);
 		}
 
+		// method to deal one card
 		this.deal_card = function deal_card() {
 			this.dealt = "";
 	
+			// generates a random number and selects that from the deck
 			var temp = Math.floor((Math.random()*this.cards.length)+1)-1;
 			//console.log(temp);
 			var card = this.cards[temp];
@@ -30,6 +32,7 @@
 		}
 	}
 
+	// function to create an instance of deck of cards object and calls method to create deck.
 	function start() {
 		fresh_deck = new deck_of_cards();
 		fresh_deck.create_deck();
@@ -47,19 +50,35 @@
 	//console.log(fresh_deck.cards);
 
 
-
-
-
-	// jQuery code 
+	// jQuery code /////////////////////////////////////////
 	$(document).ready(function() {
+
+		// scroll function for pages
+/*		$(".scroll").click(function() {
+			event.preventDefault();
+			
+			var target = 0;
+			if ($(this).offset().top > $(document).height()-$(window).height()) {
+				target=$(document).height()-$(window).height();
+			} else {
+				target = $(this).offset().top;
+			}
+
+			$('html,body').animate({scrollTop:target}, 500, 'swing');
+		});
+*/
+
+		// declare variables
 		var dealt_card;
 		var card_suit;
 		var card_value;
 		var old_value;
 
+		// creates deck and resets values for a new game 
 		start();
 		reset_values();
 
+		// function to get suit symbol for card display
 		function card_display(card) {
 			var temp = card.substring(0,1);	
 			if (temp == 'H' || temp == 'D') {
@@ -81,6 +100,7 @@
 			//console.log(card_value);
 		}
 
+		// function to change the card value from a string to an integer
 		function change_to_numbers(temp) {
 			switch (temp) {
 				case 'A':
@@ -126,6 +146,7 @@
 			return temp;
 		}
 
+		// resets values for a new game start
 		function reset_values() {
 			$(".value").remove();
 			$(".suit").remove();
@@ -135,9 +156,13 @@
 			$(".level3").css("display", "none");
 			$(".level4").css("display", "none");
 			$(".level5").css("display", "none");
-		
+			$("#level-1-title").css("visibility", "inherit");
+			$("#level-2-title").css("visibility", "inherit");
+			$("#level-3-title").css("visibility", "inherit");
+			$("#level-4-title").css("visibility", "inherit");		
 		}
 
+		// function to ask the player to play another game
 		function restart() {
 			var refresh = confirm("You lose!  Would you like to play again?");
 			if (refresh) {
@@ -149,11 +174,12 @@
 			}
 		}
 
-		// event listener functions
+		// event listener functions ///////
 		$("#start").click(function() {
 			reset_values();
 		});
 
+		// actions for level 1 clicks
 		$(document).on("click", ".level1", function() {
 			//$(this).css("visibility", "hidden");
 			//$(this).next().css("visibility", "hidden");
@@ -173,11 +199,13 @@
 			if ($(this).hasClass("choice-red") && (card_suit == '&hearts;' || card_suit == '&diams;')) {
 				//alert("red win");
 				window.location = "#page4";
+				$("#level-1-title").css("visibility", "hidden");
 				$(".level2").css("display", "inherit");
 				old_value = card_value;
 			} else if ($(this).hasClass("choice-black") && (card_suit == '&clubs;' || card_suit == '&spades;')) {
 				//alert("black win!");
 				window.location = "#page4";
+				$("#level-1-title").css("visibility", "hidden");
 				$(".level2").css("display", "inherit");
 				old_value = card_value;
 			} else {
@@ -185,6 +213,7 @@
 			}		
 		});
 	
+		// actions for level 2 clicks
 		$(document).on("click", ".level2", function() {
 			dealt_card = fresh_deck.deal_card();
 			card_display(dealt_card);
@@ -210,6 +239,7 @@
 			} else if ($(this).hasClass("choice-high") && card_value > old_value) {
 				//alert("you win with choice-high");
 				window.location = "#page3";
+				$("#level-2-title").css("visibility", "hidden");
 				$(".level3").css("display", "inherit");
 			} else if ($(this).hasClass("choice-low") && card_value > old_value) {
 				//alert("you lose with choice-low");
@@ -217,10 +247,12 @@
 			} else if ($(this).hasClass("choice-low") && card_value < old_value) {
 				//alert("you win with choice-low");
 				window.location = "#page3";
+				$("#level-2-title").css("visibility", "hidden");
 				$(".level3").css("display", "inherit");
 			}
 		});
 
+		// actions for level 3 clicks
 		$(document).on("click", ".level3", function() {
 			dealt_card = fresh_deck.deal_card();
 			card_display(dealt_card);
@@ -235,11 +267,13 @@
 			if ($(this).hasClass("choice-red") && (card_suit == '&hearts;' || card_suit == '&diams;')) {
 				//alert("red win");
 				window.location = "#page2";
+				$("#level-3-title").css("visibility", "hidden");
 				$(".level4").css("display", "inherit");
 				old_value = card_value;
 			} else if ($(this).hasClass("choice-black") && (card_suit == '&clubs;' || card_suit == '&spades;')) {
 				//alert("black win!");
 				window.location = "#page2";
+				$("#level-3-title").css("visibility", "hidden");
 				$(".level4").css("display", "inherit");
 				old_value = card_value;
 			} else {
@@ -247,6 +281,7 @@
 			}
 		});
 
+		// actions for level 4 clicks
 		$(document).on("click", ".level4", function() {
 			dealt_card = fresh_deck.deal_card();
 			card_display(dealt_card);
@@ -271,6 +306,7 @@
 			} else if ($(this).hasClass("choice-high") && card_value > old_value) {
 				//alert("you win with choice-high");
 				window.location = "#page1";
+				$("#level-4-title").css("visibility", "hidden");
 				$(".level5").css("display", "inherit");
 			} else if ($(this).hasClass("choice-low") && card_value > old_value) {
 				//alert("you lose with choice-low");
@@ -278,13 +314,16 @@
 			} else if ($(this).hasClass("choice-low") && card_value < old_value) {
 				//alert("you win with choice-low");
 				window.location = "#page1";
+				$("#level-4-title").css("visibility", "hidden");
 				$(".level5").css("display", "inherit");
 			}
 		});
 
+		// actions for level 5 clicks
 		$(document).on("click", ".level5", function() {
 			dealt_card = fresh_deck.deal_card();
 			card_display(dealt_card);
+			$(".level5").css("display", "none");
 
 			$(this).parent().css("background-color", "white").prepend("<p class='value right "+dealt_card+"'>"+card_value+"</p><p class='suit left "+dealt_card+"'>"+card_suit+"</p>");
 			if (card_suit == '&hearts;' || card_suit == '&diams;') {
