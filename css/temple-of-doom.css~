@@ -1,0 +1,176 @@
+/* Mario Hsieh */
+body, ul, li, p, h1
+{
+	padding: 0px;
+	margin: 0px;
+}
+.center
+{
+	margin: 0px auto;
+}
+.block
+{
+	display: block;
+}
+.left
+{
+	float: left;
+}
+.right
+{
+	float: right;
+}
+body
+{
+	width: 100%;
+	background-color: #505050;
+	/*overflow: hidden;*/
+}
+header
+{
+	background-color: #000000;
+	width: 960px;
+	height: 720px;	
+}
+	h1#main-title
+	{
+		font-size: 9em;
+		text-align: center;
+		font-variant: small-caps;
+	}
+	h3
+	{
+		font-size: 4em;
+		text-align: center;
+	}
+		a
+		{
+			text-decoration: none;
+			color: inherit;
+		}
+section
+{
+	width: 960px;
+	height: 450px;
+	padding: 20px;
+}
+h2
+{
+	text-align: center;
+	font-size: 3em;
+}
+ul.card-row
+{
+	list-style-type: none;
+}
+	li.card-list-item
+	{
+		display: inline-block;
+	}
+		div.card
+		{
+			background-color: #3399FF;
+			width: 175px;
+			height: 250px;
+			margin: 0px 5px;
+			border-radius: 15px;
+		}
+			.choice-red,.choice-black
+			{
+				width: 87px;
+				height: 250px;
+				cursor: pointer;
+			}
+			.choice-red:hover
+			{
+				background-color: red;
+				border-top-left-radius: 15px;
+				border-bottom-left-radius: 15px;
+			}
+			.choice-black:hover
+			{
+				background-color: black;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+			}
+			.value
+			{
+				font-size: 2em;
+				margin: 10px 15px 0px 0px;
+			}
+			.suit
+			{
+				font-size: 7em;
+				margin: 55px 0px 0px 60px;
+			}
+			.choice-high, .choice-low
+			{
+				width: 175px;
+				height: 125px;
+				cursor: pointer;
+			}
+			.choice-high:hover
+			{
+				background-color: grey;
+				border-top-right-radius: 15px;
+				border-top-left-radius: 15px;
+			}
+			.choice-low:hover
+			{
+				background-color: grey;
+				border-bottom-right-radius: 15px;
+				border-bottom-left-radius: 15px;
+			}
+.red
+{
+	color: red;
+}
+.white
+{
+	color: white;
+}
+.black
+{
+	color: black;
+}
+#page1
+{
+	
+}
+	ul#list-level-5
+	{
+		width: 187px;
+	}
+#page2
+{
+	
+}
+	ul#list-level-4
+	{
+		width: 374px;
+	}
+#page3
+{
+	
+}
+	ul#list-level-3
+	{
+		width: 563px;
+	}
+#page4
+{
+	
+}
+	ul#list-level-2
+	{
+		width: 753px;
+	}
+#page5
+{
+	height: 600px;	
+}
+	ul#list-level-1
+	{
+		width: 945px;
+	}
+
