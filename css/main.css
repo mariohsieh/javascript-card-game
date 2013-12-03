@@ -97,13 +97,15 @@ ul.card-row
 			}
 			.value
 			{
+				position: absolute;
 				font-size: 2em;
 				margin: 10px 0px 0px 15px;
 			}
 			.value-lower
 			{
+				position: absolute;
 				font-size: 2em;
-				margin: 170px 15px 0px 0px;
+				margin: 170px 0px 0px 135px;
 				transform: rotate(180deg);
 				-ms-transform: rotate(180deg);
 				-o-transform: rotate(180deg);

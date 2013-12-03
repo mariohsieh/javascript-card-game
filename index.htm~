@@ -5,14 +5,12 @@
 	<!-- Mario Hsieh -->
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 	<title>Pyramid Card Game</title>
-
 	<!-- bootstrap links
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<script type="javascript" src="js/bootstrap.min.js"></script> -->
 
 	<!--jQuery link -->
 	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
@@ -36,7 +34,10 @@
 </section>
 <section id="page4" class="center scroll">
 	<br /><br />
-	<h2 id="level-4-title"  class="white title">HIGH or LOW?</h2>
+	<h2 id="level-4-title" class="white title">HIGH or LOW?</h2>
+
+	<br /><br />
+	<h2 id="level-4-title">HIGH or LOW?</h2>
 	<ul id="list-level-4" class="card-row center">
 		<li class="card-list-item">
 			<div id="2" class="card">
@@ -144,15 +145,6 @@
 <script type="text/javascript" src="js/card-game-test.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 

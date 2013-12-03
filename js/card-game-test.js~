@@ -44,8 +44,6 @@ function Game() {
 // jQuery code /////////////////////////////////////////
 $(document).ready(function() {
 
-		$(".title").css("visibility", "hidden");
-
 	// scroll function for pages
 	function scroll(page) {
 		$("html, body").animate({
@@ -66,7 +64,7 @@ $(document).ready(function() {
 		$(".level3").css("display", "none");
 		$(".level4").css("display", "none");
 		$(".level5").css("display", "none");
-		$("#level-1-title").css("visibility", "inherit");
+		$("#level-1-title").css("visibility", "visible");
 		$("#level-2-title").css("visibility", "hidden");
 		$("#level-3-title").css("visibility", "hidden");
 		$("#level-4-title").css("visibility", "hidden");
@@ -225,6 +223,7 @@ $(document).ready(function() {
 		if (card_value == old_value) {
 			alert("Please choose again.");
 			$(".level2").css("display", "inherit");
+			$(this).siblings("div").css("display", "none");
 		} else if ($(this).hasClass("choice-high") && card_value < old_value) {
 			//alert("you lose with choice-high");
 			restart();

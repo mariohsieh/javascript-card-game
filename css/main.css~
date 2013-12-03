@@ -97,13 +97,15 @@ ul.card-row
 			}
 			.value
 			{
+				position: absolute;
 				font-size: 2em;
 				margin: 10px 0px 0px 15px;
 			}
 			.value-lower
 			{
+				position: absolute;
 				font-size: 2em;
-				margin: 170px 15px 0px 0px;
+				margin: 170px 0px 0px 130px;
 				transform: rotate(180deg);
 				-ms-transform: rotate(180deg);
 				-o-transform: rotate(180deg);
@@ -147,6 +149,10 @@ ul.card-row
 .title
 {
 	visibility: hidden;
+}
+.level1, .level2, .level3, .level4, .level5
+{
+	display: none;
 }
 #page5
 {
